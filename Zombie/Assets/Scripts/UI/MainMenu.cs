@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI recordText;
     private int record;
 
+    private string _nextScene = "GameScene";
+
     [SerializeField] private Sprite muteTX;
     [SerializeField] private Sprite soundTX;
     [SerializeField] private Button SoundButton;
@@ -17,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        isSound = PlayerPrefs.GetInt("isSound") == 1 ? true : false;
+        isSound = PlayerPrefs.GetInt("isSound") == 1;
         UpdateButtonSound();
 
         record = PlayerPrefs.GetInt("Record");
@@ -33,8 +35,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("isSound", isSound ? 1 : 0);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);       
+        SceneManager.LoadScene(_nextScene);       
     }
 
     private void UpdateButtonSound()
@@ -46,7 +47,7 @@ public class MainMenu : MonoBehaviour
         else
         {
             SoundButton.image.sprite = soundTX;
-        }        
+        }
     }
 
     public void SoundUpdate()
@@ -55,11 +56,13 @@ public class MainMenu : MonoBehaviour
         UpdateButtonSound();        
     }
 
-
     public void ExitGame()
     {
         Application.Quit();
     }
 
-
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("isSound", isSound ? 1 : 0);
+    }
 }

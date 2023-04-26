@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _zombies:
   - {fileID: 6445523335803188885, guid: d331063dc21810d4aa65a1ba993e01ba, type: 3}
-  - {fileID: 8792100287218139784, guid: 15bd84b33337de941afef2343255ae7f, type: 3}
+  - {fileID: 8792100287218139784, guid: 5ce5becdf379b4a4185d16c89883e426, type: 3}
   - {fileID: 630911006336594975, guid: 8e6fef3ae4a74ee43bebde35bb67d188, type: 3}

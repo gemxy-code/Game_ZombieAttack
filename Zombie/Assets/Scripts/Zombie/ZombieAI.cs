@@ -8,7 +8,6 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private int _score;
 
     private GameObject _target;
-    private bool isDead = false;
     private Vector3 _targetDir;
 
     void Start()
@@ -17,40 +16,33 @@ public class ZombieAI : MonoBehaviour
     }
 
 
-    //Zombie take damage
     public void TakeDamage()
     {
-        if (_health > 1f)
+        _health--;
+
+        if (_health <= 0f)
         {
-            _health -= 1f;
-        }
-        else if (!isDead)
-        {
-            _health -= 1f;
-            Dead();
+            Die();
         }
     }
 
-    //Zombie dead
-    private void Dead()
+
+    private void Die()
     {      
         CountScore.score += _score;
-        isDead = true;
         Destroy(gameObject);
     }
 
-    //hit player
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject == _target)
         {
-            Time.timeScale = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
 
-    //Zombie movement 
     void LateUpdate()
     {
         _targetDir = new Vector3 (_target.transform.position.x - transform.position.x, 0, _target.transform.position.z  -  transform.position.z);

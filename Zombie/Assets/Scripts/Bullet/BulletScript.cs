@@ -6,10 +6,10 @@ public class BulletScript : MonoBehaviour
 {
     [SerializeField] private float _speedBullet;
     
-    //Hit enemy 
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.TryGetComponent(out ZombieAI zombie))
         {
             collision.gameObject.GetComponent<ZombieAI>().TakeDamage();
             Destroy(gameObject);
@@ -19,7 +19,6 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
-        //Bullet movement
         transform.Translate(0, 0, Time.deltaTime * _speedBullet);
     }
 }

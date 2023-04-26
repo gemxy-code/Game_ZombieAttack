@@ -5,6 +5,7 @@ using TMPro;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
+    private string _startPage = "MainMenu";
 
     public void Start()
     {
@@ -24,6 +25,6 @@ public class GameOverMenu : MonoBehaviour
 
     public void ComeBackToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(_startPage);
     }
 }

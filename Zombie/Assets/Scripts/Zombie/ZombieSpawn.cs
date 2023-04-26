@@ -15,7 +15,7 @@ public class ZombieSpawn : MonoBehaviour
         _timeSpawn = 2f;
         _timeUpdate = 10f; // timer for update
 
-        //zombie spawn points for different resolutions
+
         if (Camera.main.aspect >= 1.7f)
         {
             xPoints = new float[3, 2] { { -16f, -16.5f }, { 16f, 16.5f }, { -11f, 11f } };
@@ -55,6 +55,8 @@ public class ZombieSpawn : MonoBehaviour
 
     private Vector3 CalculateZombiePosition()
     {
+
+
         int place = Random.Range(0, 3);
 
         switch (place)
