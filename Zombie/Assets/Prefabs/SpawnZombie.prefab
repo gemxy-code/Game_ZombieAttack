@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4701606480357526441}
-  - component: {fileID: -7039029099216301179}
+  - component: {fileID: 4274876249187351613}
   m_Layer: 0
   m_Name: SpawnZombie
   m_TagString: Untagged
@@ -30,9 +30,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7039029099216301179
+--- !u!114 &4274876249187351613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8094890098b8ad84fb2a622e8ebed59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombies:
-  - {fileID: 6445523335803188885, guid: d331063dc21810d4aa65a1ba993e01ba, type: 3}
-  - {fileID: 8792100287218139784, guid: 5ce5becdf379b4a4185d16c89883e426, type: 3}
-  - {fileID: 630911006336594975, guid: 8e6fef3ae4a74ee43bebde35bb67d188, type: 3}
+  _enemiesDatas:
+  - {fileID: 11400000, guid: 42d0f146492a598409e00d86116dd3c3, type: 2}
+  - {fileID: 11400000, guid: 20c15341ffed04043a78831674e7dfac, type: 2}
+  - {fileID: 11400000, guid: e09be90a6d5cf9a43a0c75254a955960, type: 2}
+  _datas:
+  - {fileID: 11400000, guid: 7cb4a5095668a4347bc45d9822de78bd, type: 2}
+  - {fileID: 11400000, guid: 70468d2fe6af484478fe10e295a420d3, type: 2}
+  - {fileID: 11400000, guid: 9e8aab21ed080e3458f2957d11652798, type: 2}

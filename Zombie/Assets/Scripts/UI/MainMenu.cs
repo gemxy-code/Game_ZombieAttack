@@ -1,16 +1,15 @@
-using System.Runtime.CompilerServices;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    //Find information for UI code with S.O.L.I.D. principles 
+
     [SerializeField] private TextMeshProUGUI recordText;
     private int record;
 
-    private string _nextScene = "GameScene";
+    private string _gameScene = "GameScene";
 
     [SerializeField] private Sprite muteTX;
     [SerializeField] private Sprite soundTX;
@@ -35,18 +34,18 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(_nextScene);       
+        EventBus.SceneOpen(_gameScene);
     }
 
     private void UpdateButtonSound()
     {
         if(isSound)
         {
-            SoundButton.image.sprite = muteTX; 
+            SoundButton.image.sprite = soundTX; 
         }
         else
         {
-            SoundButton.image.sprite = soundTX;
+            SoundButton.image.sprite = muteTX;
         }
     }
 

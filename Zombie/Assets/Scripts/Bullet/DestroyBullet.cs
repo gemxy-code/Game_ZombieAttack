@@ -1,11 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class DestroyBullet : MonoBehaviour
 {
+    [SerializeField] private float _destroyTime;
 
-    void Start()
+    private void OnEnable()
     {
-        Destroy(gameObject, 3f);
+        StartCoroutine(Destroy());
     }
-
+    private IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(_destroyTime);
+        PoolManager.instance.ReturnObject(this.gameObject);
+    }
 }

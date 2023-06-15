@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class PlayerRotate : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    //[SerializeField] private GameObject player;
     public LayerMask mask;
     RaycastHit hit;
-
 
     void Update()
     {
@@ -16,7 +15,7 @@ public class PlayerRotate : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
             {
-                player.transform.LookAt(hit.point);
+                transform.LookAt(hit.point);
             }
         }
     }

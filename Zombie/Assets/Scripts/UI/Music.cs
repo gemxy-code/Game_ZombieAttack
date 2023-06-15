@@ -2,20 +2,13 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
+    //Find information for UI code with S.O.L.I.D. principles 
+
     private AudioSource musicSource;
-    private bool isSound;
 
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
-        isSound = PlayerPrefs.GetInt("isSound") == 1 ? true : false;
-        if(isSound)
-        {
-            musicSource.mute = false;
-        }
-        else
-        {
-            musicSource.mute = true;
-        }
+        musicSource.mute = PlayerPrefs.GetInt("isSound") == 0;
     }
 }

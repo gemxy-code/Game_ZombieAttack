@@ -3,17 +3,25 @@ using UnityEngine;
 
 public class CountScore : MonoBehaviour
 {
+    //Find information for UI code with S.O.L.I.D. principles 
 
-    public static int score;
     [SerializeField] public TextMeshProUGUI _scoreText;
+    public static int Score;
 
-    void Start()
+    private void OnEnable()
     {
-        score = 0; 
+        EventBus.OnEnemyDied += AddScore;
+        Score = 0;        
     }
 
-    void Update()
+    private void OnDisable()
     {
-        _scoreText.text = score.ToString();
+        EventBus.OnEnemyDied -= AddScore;
+    }
+
+    private void AddScore(int value)
+    {
+        Score += value;
+        _scoreText.text = Score.ToString();
     }
 }

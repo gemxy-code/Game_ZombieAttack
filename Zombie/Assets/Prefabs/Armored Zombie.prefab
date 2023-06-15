@@ -9,11 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726900105116067858}
-  - component: {fileID: -1659632920886392435}
   - component: {fileID: -3286773031345321462}
   - component: {fileID: 447562726247335727}
+  - component: {fileID: 5223898610213656496}
+  - component: {fileID: 9098516428141951058}
+  - component: {fileID: 7058935477392837847}
+  - component: {fileID: 2319085143285163053}
   m_Layer: 0
-  m_Name: ArmoredZombie
+  m_Name: Armored Zombie
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,21 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1659632920886392435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630911006336594975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f3883ba89c19447bfc70226a1cc234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _zombieSpeed: 1
-  _health: 50
-  _score: 30
 --- !u!54 &-3286773031345321462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,6 +67,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5223898610213656496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630911006336594975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0a3da35c4e2604caf4a01f7908b24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyData: {fileID: 11400000, guid: e09be90a6d5cf9a43a0c75254a955960, type: 2}
+--- !u!114 &9098516428141951058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630911006336594975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f3883ba89c19447bfc70226a1cc234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyData: {fileID: 11400000, guid: e09be90a6d5cf9a43a0c75254a955960, type: 2}
+--- !u!114 &7058935477392837847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630911006336594975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb48ed5a177f0bb41bb039708bf02858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2319085143285163053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630911006336594975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f676f6d2b37a90a468aee1f0d25f9763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &669810510373396808
 PrefabInstance:
   m_ObjectHideFlags: 0

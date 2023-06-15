@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5788946155712290348}
+  - component: {fileID: 8273205563385540907}
   m_Layer: 0
   m_Name: ShootPlace
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 4761640803583141906}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8273205563385540907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814338799649011162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8055979900504a24e88bf90690c67c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletObj: {fileID: 8353090874860609268, guid: 35a6038d363f7e2469e3b7fba335f25f, type: 3}
 --- !u!1 &6962667919423782472
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4761640803583141906}
+  - component: {fileID: 2037454230564516795}
   - component: {fileID: -1496965933919154413}
   - component: {fileID: 149113974055709313}
   - component: {fileID: 372168416688780759}
@@ -68,6 +83,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037454230564516795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962667919423782472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eecbcb218d5ce545af5f0c5b7b0fea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &-1496965933919154413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,9 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8055979900504a24e88bf90690c67c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletObj: {fileID: 8353090874860609268, guid: 35a6038d363f7e2469e3b7fba335f25f, type: 3}
-  GunPosition: {fileID: 5788946155712290348}
-  _rotateSpeed: 0.1
+  _bulletObj: {fileID: 0}
 --- !u!54 &149113974055709313
 Rigidbody:
   m_ObjectHideFlags: 0

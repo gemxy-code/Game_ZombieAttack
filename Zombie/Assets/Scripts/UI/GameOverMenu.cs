@@ -1,30 +1,32 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameOverMenu : MonoBehaviour
 {
+    //Find information for UI code with S.O.L.I.D. principles 
+
     [SerializeField] private TextMeshProUGUI scoreText;
+
     private string _startPage = "MainMenu";
 
     public void Start()
     {
-        int score = CountScore.score;
         int record = PlayerPrefs.GetInt("Record");
+        int score = CountScore.Score;
 
-        if(score > record)
+        if (score > record)
         {
-            scoreText.text = "Новый рекорд: " + score;
+            scoreText.text = "New record: " + score;
             PlayerPrefs.SetInt("Record", score);
         }
         else
         {
-            scoreText.text = "Набрано очков: " + score;
+            scoreText.text = "Score: " + score;
         }
     }
 
     public void ComeBackToMenu()
     {
-        SceneManager.LoadScene(_startPage);
+        EventBus.SceneOpen(_startPage);
     }
 }
